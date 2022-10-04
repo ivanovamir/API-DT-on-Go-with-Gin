@@ -1,0 +1,17 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}"/>
+{% endblock %}
+
+{% block nav-global %}
+
+<ul>
+    <a style="color:#232A27" href="{% url 'google_metric' %}">Google метрика</a>
+    <a style="color:#232A27" href="{% url 'yandex_metric' %}">Yandex метрика</a>
+    <a style="color:#232A27" href="{% url 'telegram_bot' %}">Телеграм бот</a>
+</ul>
+
+{% endblock %}
+

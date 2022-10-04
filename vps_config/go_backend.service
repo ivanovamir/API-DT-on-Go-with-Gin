@@ -1,0 +1,13 @@
+[Unit]
+Description=deshevle-tut
+After=network.target
+
+[Service]
+WorkingDirectory=/home/gumaonelove/deshevle-tut/golang_backend/cmd
+ExecStart=/home/gumaonelove/deshevle-tut/golang_backend/cmd/main
+KillMode=process
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
