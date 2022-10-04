@@ -21,7 +21,6 @@ ___
 - Go (1.19.1)
   - Gin (1.18.1)
   - joho / godotenv
-  - golang-jwt / jwt
   - mitchellh / mapstructure
   - mileusna / useragent
   - go-gorm / gorm
@@ -72,6 +71,9 @@ DATABASES = {
    }
 }
 ```
+
+**Also you need to replace os.Getnev("Key_Name") from .env to yore data's in this files:**
+**`golang_backend\controller\emails.go`** - change **`Email`**, **`App password`** and **`Secret Key`**
 
 **To run the Go api go to `cd golang_backend` and run this:**
 ```go
