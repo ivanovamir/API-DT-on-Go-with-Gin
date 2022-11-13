@@ -1,19 +1,29 @@
 package config
 
 import (
+	"fmt"
+	"log"
+	"os"
+
 	"github.com/ivanovamir/gin-test-4/models"
+	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 var DB *gorm.DB
 
 func Connect() {
 
-	db, err := gorm.Open(postgres.Open("postgres://postgres:vdnjvjnjhgDFGHJXCV56483754343@178.21.8.81/shop"), &gorm.Config{
+	if err := godotenv.Load(); err != nil {
+		log.Fatalf("error loading env variables: %s", err.Error())
+	}
+
+	db, err := gorm.Open(postgres.Open(fmt.Sprintf("postgres://%s:%s@%s/%s", os.Getenv("DB_USERNAME"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"), os.Getenv("DB_NAME"))), &gorm.Config{
 		SkipDefaultTransaction: true,
 		PrepareStmt:            true,
-		// Logger:                 logger.Default.LogMode(logger.Silent),
+		Logger:                 logger.Default.LogMode(logger.Silent),
 	})
 	if err != nil {
 		panic(err)

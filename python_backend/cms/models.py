@@ -3,7 +3,7 @@ from django.db import models
 
 class SiteLinks(models.Model):
     id = models.BigAutoField(primary_key=True)
-    link = models.TextField(blank=True, null=True, verbose_name = 'Ссылка на сайт')
+    link = models.TextField(blank=True, null=True, verbose_name='Ссылка на сайт')
 
     class Meta:
         managed = False
@@ -18,10 +18,10 @@ class SiteLinks(models.Model):
 
 class Sliders(models.Model):
     id = models.BigAutoField(primary_key=True)
-    main_text = models.TextField(blank=True, null=True, verbose_name = 'Главный текст')
-    upper_text = models.TextField(blank=True, null=True, verbose_name = 'Текст выше')
-    down_text = models.TextField(blank=True, null=True, verbose_name = 'Текст ниже')
-    image = models.ImageField(upload_to="data/photos/sliders", null=True, verbose_name = 'Фотография')
+    main_text = models.TextField(blank=True, null=True, verbose_name='Главный текст')
+    upper_text = models.TextField(blank=True, null=True, verbose_name='Текст выше')
+    down_text = models.TextField(blank=True, null=True, verbose_name='Текст ниже')
+    image = models.ImageField(upload_to="data/photos/sliders", null=True, verbose_name='Фотография')
 
     class Meta:
         managed = False
@@ -34,12 +34,30 @@ class Sliders(models.Model):
         return f'{self.main_text}'
 
 
+class MiniSliders(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    upper_text = models.TextField(blank=True, null=True, verbose_name='Вверхний текст')
+    marked_text = models.TextField(blank=True, null=True, verbose_name='Выделенный текст')
+    main_text = models.TextField(blank=True, null=True, verbose_name='Главный текст')
+    image = models.ImageField(upload_to="data/photos/labels", null=True, verbose_name='Фотография')
+
+    class Meta:
+        managed = False
+        db_table = 'mini_sliders'
+        verbose_name = 'Лейбл'
+        verbose_name_plural = 'Лейбл'
+        ordering = ['id']
+
+    def __str__(self):
+        return f'{self.upper_text}'
+
+
 class News(models.Model):
     id = models.BigAutoField(primary_key=True)
-    title = models.TextField(blank=True, null=True, verbose_name = 'Заголовок')
-    body = models.TextField(blank=True, null=True, verbose_name = 'Содержание')
-    image = models.ImageField(upload_to="data/photos/news", null=True, verbose_name = 'Фотография')
-    created_at = models.DateTimeField(blank=True, null=True, verbose_name = 'Дата создания')
+    title = models.TextField(blank=True, null=True, verbose_name='Заголовок')
+    body = models.TextField(blank=True, null=True, verbose_name='Содержание')
+    image = models.ImageField(upload_to="data/photos/news", null=True, verbose_name='Фотография')
+    created_at = models.DateTimeField(blank=True, null=True, verbose_name='Дата создания')
 
     class Meta:
         managed = False
@@ -54,7 +72,7 @@ class News(models.Model):
 
 class Links(models.Model):
     id = models.BigAutoField(primary_key=True)
-    link = models.TextField(blank=True, null=True, verbose_name = 'Ссылка на соц. сеть')
+    link = models.TextField(blank=True, null=True, verbose_name='Ссылка на соц. сеть')
 
     class Meta:
         managed = False
@@ -69,7 +87,7 @@ class Links(models.Model):
 
 class Addresses(models.Model):
     id = models.BigAutoField(primary_key=True)
-    address = models.TextField(blank=True, null=True, verbose_name = 'Адрес')
+    address = models.TextField(blank=True, null=True, verbose_name='Адрес')
 
     class Meta:
         managed = False
@@ -86,7 +104,7 @@ class Services(models.Model):
     id = models.BigAutoField(primary_key=True)
     title = models.TextField(blank=True, null=True, verbose_name='Название')
     body = models.TextField(blank=True, null=True, verbose_name='Содержание')
-    image = models.ImageField(upload_to="data/photos/services", null=True, verbose_name = 'Фотография')
+    image = models.ImageField(upload_to="data/photos/services", null=True, verbose_name='Фотография')
 
     class Meta:
         managed = False
@@ -101,7 +119,7 @@ class Services(models.Model):
 class Abouts(models.Model):
     id = models.BigAutoField(primary_key=True)
     main_text = models.TextField(blank=True, null=True, verbose_name='Текст')
-    image = models.ImageField(upload_to="data/photos/about", null=True, verbose_name = 'Фотография')
+    image = models.ImageField(upload_to="data/photos/about", null=True, verbose_name='Фотография')
 
     class Meta:
         managed = False
@@ -111,6 +129,7 @@ class Abouts(models.Model):
 
     def __str__(self):
         return f'{self.id}'
+
 
 class Emails(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -126,7 +145,6 @@ class Emails(models.Model):
 
     def __str__(self):
         return f'{self.id},{self.logo_image}'
-
 
 
 class EmailListToSends(models.Model):
