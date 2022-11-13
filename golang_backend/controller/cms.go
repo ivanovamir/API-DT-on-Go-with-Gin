@@ -53,6 +53,16 @@ func GetAllAddress(c *gin.Context) {
 	}
 }
 
+func GetMiniSlider(c *gin.Context) {
+	var slider models.MiniSlider
+	if err := config.DB.First(&slider).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, err.Error())
+	} else {
+		slider.Image = media_url + slider.Image
+		c.JSON(http.StatusOK, gin.H{"data": []models.MiniSlider{slider}})
+	}
+}
+
 func GetAllAbout(c *gin.Context) {
 	var about []models.About
 
@@ -64,5 +74,4 @@ func GetAllAbout(c *gin.Context) {
 		}
 		c.JSON(http.StatusOK, gin.H{"data": about})
 	}
-
 }

@@ -23,7 +23,7 @@ func CORS() gin.HandlerFunc {
 }
 
 func main() {
-	gin.SetMode(gin.ReleaseMode)
+	// gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.Static("/static", "./frontend/static")
 	router.LoadHTMLGlob("./frontend/*.html")

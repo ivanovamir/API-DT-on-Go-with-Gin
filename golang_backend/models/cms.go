@@ -8,6 +8,14 @@ type Slider struct {
 	Image     string `json:"image"`
 }
 
+type MiniSlider struct {
+	Id         uint   `json:"id" gorm:"primaryKey"`
+	UpperText  string `json:"upper_text"`
+	MarkedText string `json:"marked_text"`
+	MainText   string `json:"main_text"`
+	Image      string `json:"image"`
+}
+
 type Links struct {
 	Id   uint   `json:"id" gorm:"primaryKey"`
 	Link string `json:"link"`

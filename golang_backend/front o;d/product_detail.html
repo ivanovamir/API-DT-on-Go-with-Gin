@@ -1,6 +1,7 @@
 <html lang="ru">
 
 <head>
+    
     <meta charset="utf-8">
     <link rel="icon" href="/static/icons/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,14 +10,19 @@
         content="Самый большой ассортимент запасных частей на грузовые автомобили Маз, ЗИЛ, УРАЛ по самым выгодным ценам с доставкой по всей России &quot;МИДКАМ&quot; Набережные Челны.">
     <link rel="apple-touch-icon" href="./static/icons/logo192.png">
     <link rel="manifest" href="./manifest.json">
+    <script type="text/javascript" async=""
+        src="https://www.gstatic.com/recaptcha/releases/PRMRaAwB3KlylGQR57Dyk-pF/recaptcha__ru.js"
+        crossorigin="anonymous"
+        integrity="sha384-1sYZhlC/22Is/UvTnENB6ZfSWI0jPs+sTg7PkH8SxuJu7abtgKi6VR1WRW1mtUjS"></script>
     <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
     <script
         type="text/javascript">!function (e, t, c, r, a, n, m) { e.ym = e.ym || function () { (e.ym.a = e.ym.a || []).push(arguments) }; e.ym.l = 1 * new Date; for (var s = 0; s < document.scripts.length; s++)if (document.scripts[s].src === r) return; n = t.createElement(c), m = t.getElementsByTagName(c)[0], n.async = 1, n.src = r, m.parentNode.insertBefore(n, m) }(window, document, "script", "https://mc.yandex.ru/metrika/tag.js"), ym(90012506, "init", { defer: !0, clickmap: !0, trackLinks: !0, accurateTrackBounce: !0, webvisor: !0, ecommerce: "dataLayer" })</script>
-    {{range .new_content}}
-    <title>Запчасти ДТ | {{.Title}}</title>
+    {{range .product_content}}
+    <title>{{.Title}}</title>
     {{end}}
-    <script defer="defer" src="/static/js/main.47f1b0e6.js"></script>
-    <link href="/static/css/main.bd634c2d.css" rel="stylesheet">
+    
+    <script defer="defer" src="./static/js/main.c99b6df7.js"></script>
+    <link href="./static/css/main.c637bb91.css" rel="stylesheet">
     <style id="_goober">
         @keyframes go2264125279 {
             from {
@@ -20824,7 +20830,7 @@
 
         .material-scrolltop,
         .material-scrolltop:before {
-            background-image: url(/media/top-arrow.85fe6fd9ca220ea569df.svg);
+            background-image: url(/static/media/top-arrow.85fe6fd9ca220ea569df.svg);
             background-position: center 50%;
             background-repeat: no-repeat
         }
@@ -20837,8 +20843,8 @@
             font-family: FontAwesome;
             font-style: normal;
             font-weight: 400;
-            src: url(/media/fontawesome-webfont.8b43027f47b20503057d.eot);
-            src: url(/media/fontawesome-webfont.8b43027f47b20503057d.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/media/fontawesome-webfont.20fd1704ea223900efa9.woff2) format("woff2"), url(/media/fontawesome-webfont.f691f37e57f04c152e23.woff) format("woff"), url(/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf) format("truetype"), url(/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg#fontawesomeregular) format("svg")
+            src: url(/static/media/fontawesome-webfont.8b43027f47b20503057d.eot);
+            src: url(/static/media/fontawesome-webfont.8b43027f47b20503057d.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2) format("woff2"), url(/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff) format("woff"), url(/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf) format("truetype"), url(/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg#fontawesomeregular) format("svg")
         }
 
         .fa {
@@ -24348,13 +24354,14 @@
     <!-- Main Styles for Robot | END -->
 
     <style>
-        [_nghost-iii-c23] {
+        [_nghost-mmw-c23] {
             font-family: Open Sans, sans-serif;
             color: #121212
         }
     </style>
     <meta name="description"
-        content="Самый большой ассортимент запасных частей на грузовые автомобили Маз, ЗИЛ, УРАЛ по самым выгодным ценам с доставкой по всей России &quot;МИДКАМ&quot; Набережные Челны."
+        content="Самый большой ассортимент запасных частей на грузовые автомобили Маз, 
+                            ЗИЛ, УРАЛ по самым выгодным ценам с доставкой по всей России &quot;МИДКАМ&quot; Набережные Челны."
         data-rh="true">
 </head>
 
@@ -24436,8 +24443,7 @@
                                                     </nav>
                                                 </div>
                                             </li>
-                                            <li class="has-dropdown"><a aria-current="page" class="active"
-                                                    href="/blog">Блог</a></li>
+                                            <li class="has-dropdown"><a class="" href="/blog">Блог</a></li>
                                             <li class="has-dropdown"><a class="" href="/delivery">Доставка</a></li>
                                             <li class="has-dropdown"><a class="" href="/services">Услуги</a></li>
                                             <li><a class="" href="/about">О компании</a></li>
@@ -24517,7 +24523,7 @@
                                         </nav>
                                     </div>
                                 </li>
-                                <li><a aria-current="page" class="active" href="/blog"><span>Блог</span></a></li>
+                                <li><a class="" href="/blog"><span>Блог</span></a></li>
                                 <li><a class="" href="/services"><span>Услуги</span></a></li>
                                 <li><a class="" href="/about">О компании</a></li>
                                 <li><a class="" href="/delivery">Доставка</a></li>
@@ -24578,65 +24584,248 @@
             </div>
             <div class="offcanvas-overlay"></div>
             <div class="wrapper">
-                <div class="breadcrumb-section">
-                    <div class="breadcrumb-wrapper">
+                <div>
+                    <div class="breadcrumb-section">
+                        <div class="breadcrumb-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div
+                                        class="col-12 d-flex justify-content-between justify-content-md-between  align-items-center flex-md-row flex-column">
+                                        <h3 class="breadcrumb-title product-details-title-breadcumb">{{.Title}}
+                                        </h3>
+                                        <div class="breadcrumb-nav">
+                                            <nav aria-label="breadcrumb">
+                                                <ul>
+                                                    <li><a class="" href="/">Главная</a></li>
+                                                    <li><a class="" href="/shop">Каталог</a></li>
+                                                    <li class="active" aria-current="page">Товар</li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{range .product_content}}
+                    <div class="product-details-section">
                         <div class="container">
                             <div class="row">
-                                <div
-                                    class="col-12 d-flex justify-content-between justify-content-md-between  align-items-center flex-md-row flex-column">
-                                    <h3 class="breadcrumb-title">Статья</h3>
-                                    <div class="breadcrumb-nav">
-                                        <nav aria-label="breadcrumb">
+                                <div class="col-md-6">
+                                    <div class="product-details-gallery-area product-details-img-sticky">
+                                        <div class="product-large-image product-large-image-horaizontal">
+                                            <div class="product-image-large-single zoom-image-hover"><img
+                                                    class="none-image none-image-item"
+                                                    src="{{.Image_original}}"
+                                                    alt="{{.Title}}"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="product-details-content-area">
+                                        <div class="product-details-text">
+                                            <h4 class="title mb-1">{{.Title}}</h4>
+                                            <div class="product-details-vendor">(Артикул {{.Vendor_code}})</div>
+                                            <div class="price">{{.Price}} руб. (цена указана с НДС)</div>
+                                            <p></p>
+                                        </div>
+                                        <div class="product-details-variable">
+                                            <h4 class="title">Доступные опции</h4>
+                                            <div class="d-flex align-items-center">
+                                                <div class="variable-single-item "><span>Количество</span>
+                                                    <div class="product-variable-quantity"><input class="product-count"
+                                                            type="number" min="1" max="100000" placeholder="1"></div>
+                                                </div>
+                                                <div class="product-add-to-cart-btn"><span>Добавить в корзину</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-details-meta mb-20">
                                             <ul>
-                                                <li><a class="" href="/">Главная</a></li>
-                                                <li class="active" aria-current="page">Статья</li>
+                                                <li><span class="item-to-wishlist"><svg class="svg-item-icon"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                            <path
+                                                                d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z">
+                                                            </path>
+                                                        </svg>Добавить в избранное</span></li>
                                             </ul>
-                                        </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{end}}
+                </div>
+                <div class="product-details-content-tab-section section-inner-bg section-top-gap-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="product-details-content-tab-wrapper">
+                                    <ul
+                                        class="nav tablist product-details-content-tab-btn d-flex justify-content-center">
+                                        <li><span class="nav-link active">
+                                                <h5>Отзывы ({{.comments_count}})</h5>
+                                            </span></li>
+                                    </ul>
+                                    <div class="product-details-content-tab">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active show" id="review">
+                                                <div class="single-tab-content-item">
+                                                    <ul class="comment"><strong
+                                                            style="font-size: 22px; text-align: center; width: 100%; display: inline-block; border-bottom: 1px solid rgb(221, 221, 221); padding-bottom: 40px;">Оставьте
+                                                            первый отзыв!</strong></ul>
+                                                    <div class="review-form">
+                                                        <div class="review-form-text-top">
+                                                            <h5>ДОБАВИТЬ ОТЗЫВ</h5>
+                                                            <p>Ваш адрес электронной почты не будет опубликован.
+                                                                Обязательные поля отмечены *</p>
+                                                        </div>
+                                                        <form>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="default-form-box mb-20"><label
+                                                                            for="comment-name">Ваше имя
+                                                                            <span>*</span></label><input
+                                                                            id="comment-name" type="text"
+                                                                            placeholder="Введите имя" required=""
+                                                                            value=""></div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="default-form-box mb-20"><label
+                                                                            for="comment-email">Ваш Email
+                                                                            <span>*</span></label><input
+                                                                            id="comment-email" type="email"
+                                                                            placeholder="Введите email" required=""
+                                                                            value=""></div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="default-form-box mb-20"><label
+                                                                            for="comment-review-text">Ваш отзыв
+                                                                            <span>*</span></label><textarea
+                                                                            id="comment-review-text"
+                                                                            placeholder="Напишите отзыв"
+                                                                            required=""></textarea></div>
+                                                                </div>
+                                                                <div class="col-12"><button class="form-submit-btn"
+                                                                        type="submit">Отправить</button></div>
+                                                                <div class="col-12">
+                                                                    <div class="pt-15">
+                                                                        <div>
+                                                                            <div style="width: 304px; height: 78px;">
+                                                                                <div><iframe title="reCAPTCHA"
+                                                                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Le6mUkhAAAAAAXkMa3DLJVo7pjnzJk4214BPLqQ&amp;co=aHR0cHM6Ly9kdC53ZWItaWxkZXYucnU6NDQz&amp;hl=ru&amp;type=image&amp;v=PRMRaAwB3KlylGQR57Dyk-pF&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=ouwkvxlwwbkk"
+                                                                                        width="304" height="78"
+                                                                                        role="presentation"
+                                                                                        name="a-b163md4mps7g"
+                                                                                        frameborder="0" scrolling="no"
+                                                                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                                                                </div><textarea
+                                                                                    id="g-recaptcha-response-1"
+                                                                                    name="g-recaptcha-response"
+                                                                                    class="g-recaptcha-response"
+                                                                                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                                                            </div><iframe
+                                                                                style="display: none;"></iframe>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="blog-single-section">
-                    <div class="container">
-                        <div class="row flex-column-reverse flex-lg-row">
-                            <div class="col-lg-3">
-                                <div class="siderbar-section">
-                                    <div class="sidebar-single-widget">
-                                        <h6 class="sidebar-title">Другие статьи</h6>
-                                        <div class="sidebar-content">
-                                            <div class="recent-post">
-                                                <ul>
-                                                    {{range .news_content}}
-                                                    <li class="recent-post-list"><a class="post-image"
-                                                            href="/blog/{{.Id}}"><img
-                                                                src="https://deshevle-tut.ru/media/{{.Image}}"
-                                                                alt="{{.Title}}"></a>
-                                                        <div class="post-content"><a class="post-link" href="/blog/{{.Id}}">{{.Title}}</a><span
-                                                                class="post-date">{{.CreatedAt}}</span></div>
-                                                    </li>
-                                                    {{end}}
-                                                </ul>
+                <div class="product-section section-top-gap-100">
+                    <div class="section-content-gap">
+                        <div class="container">
+                            <div class="row">
+                                <div class="section-content">
+                                    <h3 class="section-title">Похожие товары</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="product-default-slider product-default-slider-4grids-1row">
+                                        <div
+                                            class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-autoheight">
+                                            <div class="swiper-wrapper" style="height: 482px;">
+                                                {{range .products_content}}
+                                                <div class="swiper-slide swiper-slide-active"
+                                                    style="width: 281.25px; margin-right: 15px;">
+                                                    <div class="product-default-single border-around">
+                                                        <div class="product-img-warp"><a
+                                                                class="product-default-img-link"
+                                                                href="/item/{{.ID}}"><img
+                                                                    class="product-default-img img-fluid none-image"
+                                                                    src="{{.Image_128}}"
+                                                                    alt="{{.Title}}"></a>
+                                                            <div class="product-action-icon-link">
+                                                                <ul>
+                                                                    <li><span><svg class="svg-icon svg-icon-item"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 512 512">
+                                                                                <path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 
+ 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 
+ 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 
+ 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 
+ 272.1 .0003 232.4 .0003 190.9L0 190.9z"></path>
+                                                                            </svg></span></li>
+                                                                    <li><span><svg class="svg-icon svg-icon-item"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 576 512">
+                                                                                <path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 
+ 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 
+ 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 
+ 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 
+ 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 
+ 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 
+ 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 
+ 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"></path>
+                                                                            </svg></span></li>
+                                                                    <li><span><svg class="svg-icon svg-icon-item"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 576 512">
+                                                                                <path d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 
+ 160 384 202.1 384 256C384 309 341 352 288 352C234.1 
+ 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 
+ 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 
+ 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 
+ 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 
+ 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 
+ 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 
+ 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 
+ 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 
+ 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 
+ 432 256C432 176.5 367.5 112 288 112z"></path>
+                                                                            </svg></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-default-content">
+                                                            <h6 class="product-default-link"><a class=""
+                                                                    href="/item/{{.ID}}">{{.Title}}</a></h6><span
+                                                                class="product-default-price">{{.Price}} руб.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{end}}
                                             </div>
+                                            <div class="swiper-button-prev swiper-button-disabled"></div>
+                                            <div class="swiper-button-next"></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-9">
-                                {{range .new_content}}
-                                <div class="blog-single-wrapper">
-                                    <div class="blog-single-img"><img class="img-fluid"
-                                            src="https://deshevle-tut.ru/media/{{.Image}}"
-                                            alt="{{.Title}}"></div>
-                                    <div class="blog-feed-post-meta"><a href=""
-                                            class="blog-feed-post-meta-date">2022-08-11</a></div>
-                                    <h4 class="post-title">{{.CreatedAt}}</h4>
-                                    <div class="para-content">
-                                        <p>{{.Body}}</p>
-                                    </div>
-                                </div>
-                                {{end}}
                             </div>
                         </div>
                     </div>
@@ -24673,7 +24862,7 @@
                                             <li><a class="" href="/services">Услуги</a></li>
                                             <li><a class="" href="/about">О компании</a></li>
                                             <li><a class="" href="/contacts">Контакты</a></li>
-                                            <li><a aria-current="page" class="active" href="/blog">Блог</a></li>
+                                            <li><a class="" href="/blog">Блог</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -24730,7 +24919,44 @@
         </div>
     </div>
     <script>window.dataLayer = window.dataLayer || []</script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadcallback&amp;render=explicit" async=""></script>
     <!---->
+    <div
+        style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div
+            style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;">
+        </div>
+        <div style="z-index: 2000000000; position: relative;"><iframe
+                title="текущую проверку reCAPTCHA можно пройти в течение ещё двух минут"
+                src="https://www.google.com/recaptcha/api2/bframe?hl=ru&amp;v=PRMRaAwB3KlylGQR57Dyk-pF&amp;k=6Le6mUkhAAAAAAXkMa3DLJVo7pjnzJk4214BPLqQ"
+                name="c-sscjyh99raj4" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                style="width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <div
+        style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div
+            style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;">
+        </div>
+        <div style="z-index: 2000000000; position: relative;"><iframe
+                title="текущую проверку reCAPTCHA можно пройти в течение ещё двух минут"
+                src="https://www.google.com/recaptcha/api2/bframe?hl=ru&amp;v=PRMRaAwB3KlylGQR57Dyk-pF&amp;k=6Le6mUkhAAAAAAXkMa3DLJVo7pjnzJk4214BPLqQ"
+                name="c-b163md4mps7g" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                style="width: 100%; height: 100%;"></iframe></div>
+    </div>
 </body>
 <app-content ng-version="14.0.2"></app-content>
 

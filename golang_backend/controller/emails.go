@@ -5,21 +5,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/smtp"
-	"os"
 	"text/template"
 
 	"github.com/gin-gonic/gin"
 	"github.com/ivanovamir/gin-test-4/config"
 	"github.com/ivanovamir/gin-test-4/models"
-	"github.com/joho/godotenv"
 )
 
 const (
-	smtpHost = "smtp.gmail.com"
-	smtpPort = "587"
-	address  = smtpHost + ":" + smtpPort
+	Senderemail       = "valornewacc@gmail.com"
+	SenderAppPassword = "apwtruabhrlgksso"
+	smtpHost          = "smtp.gmail.com"
+	smtpPort          = "587"
+	address           = smtpHost + ":" + smtpPort
+	key               = "lydluxlhxlhx637447JfjfHzhg"
 )
 
 func EmailStatusUpdate(c *gin.Context) {
@@ -30,13 +30,9 @@ func EmailStatusUpdate(c *gin.Context) {
 
 func SendEmailPhyz(email, name, phone, note string, products_title, address []string, solo_price_array []float32, products_count []int, logo, check, cart_image []string, id_order uint) {
 
-	if err := godotenv.Load(); err != nil {
-		log.Fatalf("error loading env variables: %s", err.Error())
-	}
-
 	// Sender data.
-	from := os.Getenv("Email")
-	password := os.Getenv("App_Password")
+	from := Senderemail
+	password := SenderAppPassword
 
 	// Receiver email address.
 	to := []string{
@@ -118,13 +114,10 @@ func SendEmailPhyz(email, name, phone, note string, products_title, address []st
 }
 
 func SendEmailJurik(inn, email, note, manager_name, manager_phone, company_name string, products_title, address []string, solo_price_array []float32, products_count []int, logo, check, cart_image []string, id_order uint) {
-	if err := godotenv.Load(); err != nil {
-		log.Fatalf("error loading env variables: %s", err.Error())
-	}
 
 	// Sender data.
-	from := os.Getenv("Email")
-	password := os.Getenv("App_Password")
+	from := Senderemail
+	password := SenderAppPassword
 
 	// Receiver email address.
 	to := []string{
@@ -215,10 +208,6 @@ type Emails struct {
 }
 
 func Email_list(c *gin.Context) {
-
-	if err := godotenv.Load(); err != nil {
-		log.Fatalf("error loading env variables: %s", err.Error())
-	}
 	// Sender data.
 	bodytext, error := ioutil.ReadAll(c.Request.Body)
 	if error != nil {
@@ -231,9 +220,9 @@ func Email_list(c *gin.Context) {
 	}
 
 	fmt.Print(k.Emails)
-	if os.Getenv("Key") == k.Key {
-		from := os.Getenv("Email")
-		password := os.Getenv("App_Password")
+	if key == k.Key {
+		from := Senderemail
+		password := SenderAppPassword
 
 		var emails_array []string
 

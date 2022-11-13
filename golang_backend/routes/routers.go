@@ -65,6 +65,7 @@ func Routes(router *gin.Engine) {
 		cms.GET("/site_link", controller.GetAllSite_link)
 		cms.GET("/address", controller.GetAllAddress)
 		cms.GET("/about", controller.GetAllAbout)
+		cms.GET("/label", controller.GetMiniSlider)
 	}
 	search := router.Group("/search")
 	{
